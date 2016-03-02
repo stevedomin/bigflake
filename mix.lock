@@ -1,0 +1,8 @@
+%{"benchfella": {:hex, :benchfella, "0.3.2"},
+  "bunt": {:hex, :bunt, "0.1.5"},
+  "credo": {:hex, :credo, "0.3.5"},
+  "decimal": {:hex, :decimal, "1.1.1"},
+  "ecto": {:hex, :ecto, "2.0.0-beta.1"},
+  "exprintf": {:hex, :exprintf, "0.1.6"},
+  "exprof": {:hex, :exprof, "0.2.0"},
+  "poolboy": {:hex, :poolboy, "1.5.1"}}
