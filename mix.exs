@@ -25,7 +25,6 @@ defmodule Bigflake.Mixfile do
 
   defp deps do
     [{:ecto, "2.0.0-beta.1", optional: true},
-     {:exprof, "~> 0.2.0", only: [:dev, :test]},
      {:benchfella, "~> 0.3.2", only: [:dev]},
      {:credo, "~> 0.3", only: [:dev]}]
   end
