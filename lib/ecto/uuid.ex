@@ -1,18 +1,18 @@
 if Code.ensure_loaded?(Ecto) do
 
-  defmodule Bigflake.Ecto.UUID do
+  defmodule Ecto.Bigflake.UUID do
     @behaviour Ecto.Type
 
     def type, do: :uuid
 
     @doc """
-    Casts to Bigflake.
+    Casts to Bigflake.UUID.
     """
     def cast(<< _::64, ?-, _::32, ?-, _::32, ?-, _::32, ?-, _::96 >> = u), do: {:ok, u}
     def cast(_), do: :error
 
     @doc """
-    Converts a string representing a Bigflake into a binary.
+    Converts a string representing a Bigflake.UUID into a binary.
     """
     def dump(<< a1, a2, a3, a4, a5, a6, a7, a8, ?-,
                 b1, b2, b3, b4, ?-,
@@ -70,7 +70,7 @@ if Code.ensure_loaded?(Ecto) do
      {:ok, encode(uuid)}
     end
     def load(<<_::64, ?-, _::32, ?-, _::32, ?-, _::32, ?-, _::96>> = string) do
-      raise "trying to load string UUID as Bigflake.Ecto.UUID: #{inspect string}. " <>
+      raise "trying to load string UUID as Ecto.Bigflake.UUID: #{inspect string}. " <>
             "Maybe you wanted to declare :uuid as your database field?"
     end
     def load(%Ecto.Query.Tagged{type: :uuid, value: uuid}) do
@@ -79,14 +79,14 @@ if Code.ensure_loaded?(Ecto) do
     def load(_), do: :error
 
     @doc """
-    Generates a Bigflake id as a UUID.
+    Generates a Bigflake.UUID.
     """
     def generate do
       bingenerate() |> encode()
     end
 
     @doc """
-    Generates a Bigflake ID in the binary format.
+    Generates a Bigflake.UUID in the binary format.
     """
     def bingenerate() do
       {:ok, id} = Bigflake.mint()
