@@ -4,6 +4,8 @@ defmodule Bigflake do
 
   use GenServer
 
+  import Bigflake.Base62, only: [encode: 2]
+
   alias Bigflake.Minter
 
   # Client
@@ -29,6 +31,10 @@ defmodule Bigflake do
     GenServer.call(__MODULE__, :mint)
   end
 
+  def mint(:base62, opts \\ []) do
+    GenServer.call(__MODULE__, {:mint, :base62, opts})
+  end
+
   # Server (callbacks)
 
   def init(worker_id) do
@@ -41,6 +47,16 @@ defmodule Bigflake do
     case Minter.mint(new_timestamp, state) do
       {:ok, id, new_state} ->
         {:reply, {:ok, id}, new_state}
+      {:error, reason, new_state} ->
+        {:reply, {:error, reason}, new_state}
+    end
+  end
+
+  def handle_call({:mint, :base62, opts}, _from, state) do
+    new_timestamp = :os.system_time(:milli_seconds)
+    case Minter.mint(new_timestamp, state) do
+      {:ok, id, new_state} ->
+        {:reply, {:ok, encode(id, opts)}, new_state}
       {:error, reason, new_state} ->
         {:reply, {:error, reason}, new_state}
     end

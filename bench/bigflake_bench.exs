@@ -13,4 +13,9 @@ defmodule  BigflakeBench do
     Bigflake.mint()
     :ok
   end
+
+  bench "mint base62 ids" do
+    Bigflake.mint(:base62)
+    :ok
+  end
 end
