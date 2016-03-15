@@ -245,7 +245,8 @@ end
 (Results from a MBP i7 2.5Ghz)
 
 ```
-mint ids     1000000   2.78 µs/op
+mint ids            1000000   2.69 µs/op
+mint base62 ids      500000   6.64 µs/op
 ```
 
 ## LICENSE
