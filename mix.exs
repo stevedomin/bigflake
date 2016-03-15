@@ -24,8 +24,7 @@ defmodule Bigflake.Mixfile do
   defp elixirc_paths(_),     do: ["lib"]
 
   defp deps do
-    [{:ecto, "2.0.0-beta.1", optional: true},
-     {:base62, "~> 1.2.0"},
+    [{:base62, "~> 1.2.0"},
      {:benchfella, "~> 0.3.2", only: [:dev]},
      {:credo, "~> 0.3", only: [:dev]}]
   end
