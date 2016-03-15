@@ -1,6 +1,6 @@
 ## Changelog
 
-## v0.3.0-dev
+## v0.3.0 - 2016-03-15
 ## Removed
 * `Ecto.Bigflake.UUID` has been removed. This module doesn't belong in the library. More documentation has been added
 showing how to use Bigflake ids with Ecto.
