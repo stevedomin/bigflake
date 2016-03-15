@@ -46,7 +46,7 @@ config :bigflake, worker_id: :en1
 
 ## Using with Ecto
 
-There are several you can use Bigflake ids as primary keys in your Ecto model.
+There are several ways you can use Bigflake ids as primary keys in your Ecto schemas.
 
 ### Base62-encoded string
 
