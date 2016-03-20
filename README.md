@@ -1,6 +1,7 @@
 # Bigflake
 
 [![Build Status](https://travis-ci.org/stevedomin/bigflake.svg?branch=master)](https://travis-ci.org/stevedomin/bigflake)
+[![Deps Status](https://beta.hexfaktor.org/badge/all/github/stevedomin/bigflake.svg)](https://beta.hexfaktor.org/github/stevedomin/bigflake)
 
 128-bit, k-ordered, conflict-free IDs in Elixir.
 
