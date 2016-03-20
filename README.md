@@ -5,7 +5,7 @@
 
 128-bit, k-ordered, conflict-free IDs in Elixir.
 
-This implementation draws heavily on [Matt Heath's Kāla](https://github.com/mattheath/kala) project, as well as the
+This implementation draws heavily on [Matt Heath's Kāla](https://github.com/mattheath/kala) project, as well as
 [Boudary's flake](https://github.com/boundary/flake).
 
 The IDs it generates consist of:
