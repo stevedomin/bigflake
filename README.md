@@ -20,7 +20,7 @@ This package can be installed by:
   1. Adding bigflake to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:bigflake, "~> 0.3.0"}]
+          [{:bigflake, "~> 0.4.0"}]
         end
 
   2. Ensuring bigflake is started before your application:
