@@ -5,9 +5,11 @@ defmodule Bigflake.Base62 do
   end
 
   def decode(data) do
-    String.lstrip(data, ?0) |> Base62.decode!
+    data
+    |> String.trim_leading("0")
+    |> Base62.decode!
   end
 
   defp with_padding(data, nil), do: data
-  defp with_padding(data, len), do: String.rjust(data, len, ?0)
+  defp with_padding(data, len), do: String.pad_leading(data, len, "0")
 end
