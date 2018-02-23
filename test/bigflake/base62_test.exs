@@ -14,8 +14,8 @@ defmodule Bigflake.Base62Test do
     assert encode(99) == "1b"
     assert encode(3844) == "100"
     assert encode(3860) == "10G"
-    assert encode(4815162342) == "5Frvgk"
-    assert encode(9223372036854775807) == "AzL8n0Y58m7"
+    assert encode(4_815_162_342) == "5Frvgk"
+    assert encode(9_223_372_036_854_775_807) == "AzL8n0Y58m7"
   end
 
   test "encode with padding" do
@@ -29,8 +29,8 @@ defmodule Bigflake.Base62Test do
     assert encode(99, length: 10) == "000000001b"
     assert encode(3844, length: 10) == "0000000100"
     assert encode(3860, length: 10) == "000000010G"
-    assert encode(4815162342, length: 10) == "00005Frvgk"
-    assert encode(9223372036854775807, length: 20) == "000000000AzL8n0Y58m7"
+    assert encode(4_815_162_342, length: 10) == "00005Frvgk"
+    assert encode(9_223_372_036_854_775_807, length: 20) == "000000000AzL8n0Y58m7"
   end
 
   test "decode" do
@@ -44,8 +44,8 @@ defmodule Bigflake.Base62Test do
     assert decode("1b") == 99
     assert decode("100") == 3844
     assert decode("10G") == 3860
-    assert decode("5Frvgk") == 4815162342
-    assert decode("AzL8n0Y58m7") == 9223372036854775807
+    assert decode("5Frvgk") == 4_815_162_342
+    assert decode("AzL8n0Y58m7") == 9_223_372_036_854_775_807
   end
 
   test "decode with padding" do
@@ -59,7 +59,7 @@ defmodule Bigflake.Base62Test do
     assert decode("000000001b") == 99
     assert decode("0000000100") == 3844
     assert decode("000000010G") == 3860
-    assert decode("00005Frvgk") == 4815162342
-    assert decode("000000000AzL8n0Y58m7") == 9223372036854775807
+    assert decode("00005Frvgk") == 4_815_162_342
+    assert decode("000000000AzL8n0Y58m7") == 9_223_372_036_854_775_807
   end
 end

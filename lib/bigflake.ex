@@ -44,9 +44,11 @@ defmodule Bigflake do
 
   def handle_call(:mint, _from, state) do
     new_timestamp = :os.system_time(:milli_seconds)
+
     case Minter.mint(new_timestamp, state) do
       {:ok, id, new_state} ->
         {:reply, {:ok, id}, new_state}
+
       {:error, reason, new_state} ->
         {:reply, {:error, reason}, new_state}
     end
@@ -54,9 +56,11 @@ defmodule Bigflake do
 
   def handle_call({:mint, :base62, opts}, _from, state) do
     new_timestamp = :os.system_time(:milli_seconds)
+
     case Minter.mint(new_timestamp, state) do
       {:ok, id, new_state} ->
         {:reply, {:ok, encode(id, opts)}, new_state}
+
       {:error, reason, new_state} ->
         {:reply, {:error, reason}, new_state}
     end

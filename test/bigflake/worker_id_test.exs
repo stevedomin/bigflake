@@ -8,16 +8,16 @@ defmodule WorkerIdTest do
   end
 
   test "from default interface" do
-    assert WorkerId.from(:default_interface) == 108288561948617
+    assert WorkerId.from(:default_interface) == 108_288_561_948_617
   end
 
   test "from with a specific interface en0" do
-    assert WorkerId.from(:en1) == 191357987494657
+    assert WorkerId.from(:en1) == 191_357_987_494_657
   end
 
   test "from with invalid input" do
     assert_raise ArgumentError,
-                "expected an integer or an atom representing a network interface",
-                fn -> WorkerId.from("en0") end
+                 "expected an integer or an atom representing a network interface",
+                 fn -> WorkerId.from("en0") end
   end
 end
