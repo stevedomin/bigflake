@@ -20,7 +20,7 @@ This package can be installed by:
 1. Adding Bigflake to your list of dependencies in `mix.exs`:
 
     def deps do
-      [{:bigflake, "~> 0.4.0"}]
+      [{:bigflake, "~> 0.5"}]
     end
 
 2. (Optional - only for Elixir < 1.4) Ensuring Bigflake is started before your application:

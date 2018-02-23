@@ -4,7 +4,7 @@ defmodule Bigflake.Mixfile do
   def project do
     [
       app: :bigflake,
-      version: "0.4.0",
+      version: "0.5.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
       build_embedded: Mix.env() == :prod,
