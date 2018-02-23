@@ -4,13 +4,16 @@ defmodule Bigflake.WorkerId do
   def from(id) when is_integer(id), do: id
 
   def from(:default_interface) do
-    Application.get_env(:bigflake, :interface_module).list_with_mac_address()
+    Application.get_env(:bigflake, :interface_module).list_mac_addresses()
+    |> Enum.filter(fn {_iface, mac_address} ->
+      mac_address && Enum.sum(mac_address) != 0
+    end)
     |> Enum.at(0)
     |> mac_address_to_worker_id()
   end
 
   def from(interface) when is_atom(interface) do
-    Application.get_env(:bigflake, :interface_module).list_with_mac_address()
+    Application.get_env(:bigflake, :interface_module).list_mac_addresses()
     |> Enum.find(fn {iface, _opts} -> iface == interface end)
     |> mac_address_to_worker_id()
   end

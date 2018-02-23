@@ -7,8 +7,15 @@ defmodule WorkerIdTest do
     assert WorkerId.from(10) == 10
   end
 
-  test "from default interface" do
-    assert WorkerId.from(:default_interface) == 108_288_561_948_617
+  describe "from/1 with default interface" do
+    test "returns an id" do
+      assert WorkerId.from(:default_interface) == 108_288_561_948_617
+    end
+
+    test "skips null mac address" do
+      Application.put_env(:bigflake, :interface_module, FakeInterfaceNull)
+      assert WorkerId.from(:default_interface) == 108_288_561_948_617
+    end
   end
 
   test "from with a specific interface en0" do
