@@ -17,17 +17,17 @@ The IDs it generates consist of:
 
 This package can be installed by:
 
-  1. Adding bigflake to your list of dependencies in `mix.exs`:
+1. Adding Bigflake to your list of dependencies in `mix.exs`:
 
-        def deps do
-          [{:bigflake, "~> 0.4.0"}]
-        end
+    def deps do
+      [{:bigflake, "~> 0.4.0"}]
+    end
 
-  2. Ensuring bigflake is started before your application:
+2. (Optional - only for Elixir < 1.4) Ensuring Bigflake is started before your application:
 
-        def application do
-          [applications: [:bigflake]]
-        end
+    def application do
+      [applications: [:bigflake]]
+    end
 
 ## Usage
 
