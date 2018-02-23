@@ -1,5 +1,12 @@
 ## Changelog
 
+## v0.5.0 - 2018-02-23
+
+### Changed
+
+* All null mac addresses are now excluded when choosing the default interface for
+generating worker ids.
+
 ## v0.4.0 - 2016-12-22
 
 ### Changed
