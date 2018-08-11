@@ -30,7 +30,7 @@ defmodule Bigflake.Mixfile do
     [
       {:base62, "~> 1.2.0"},
       {:benchfella, "~> 0.3.2", only: [:dev]},
-      {:credo, "~> 0.9.0-rc6", only: [:dev, :test], runtime: false}
+      {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false}
     ]
   end
 
