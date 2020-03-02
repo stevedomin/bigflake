@@ -1,11 +1,11 @@
 %{
-  "base62": {:hex, :base62, "1.2.1", "4866763e08555a7b3917064e9eef9194c41667276c51b59de2bc42c6ea65f806", [:mix], [{:custom_base, "~> 0.2.1", [hex: :custom_base, repo: "hexpm", optional: false]}], "hexpm"},
-  "benchfella": {:hex, :benchfella, "0.3.5", "b2122c234117b3f91ed7b43b6e915e19e1ab216971154acd0a80ce0e9b8c05f5", [:mix], [], "hexpm"},
-  "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},
-  "credo": {:hex, :credo, "1.0.5", "fdea745579f8845315fe6a3b43e2f9f8866839cfbc8562bb72778e9fdaa94214", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm"},
-  "custom_base": {:hex, :custom_base, "0.2.1", "4a832a42ea0552299d81652aa0b1f775d462175293e99dfbe4d7dbaab785a706", [:mix], [], "hexpm"},
+  "base62": {:hex, :base62, "1.2.1", "4866763e08555a7b3917064e9eef9194c41667276c51b59de2bc42c6ea65f806", [:mix], [{:custom_base, "~> 0.2.1", [hex: :custom_base, repo: "hexpm", optional: false]}], "hexpm", "3b29948de2013d3f93aa898c884a9dff847e7aec75d9d6d8c1dc4c61c2716c42"},
+  "benchfella": {:hex, :benchfella, "0.3.5", "b2122c234117b3f91ed7b43b6e915e19e1ab216971154acd0a80ce0e9b8c05f5", [:mix], [], "hexpm", "23f27cbc482cbac03fc8926441eb60a5e111759c17642bac005c3225f5eb809d"},
+  "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm", "7af5c7e09fe1d40f76c8e4f9dd2be7cebd83909f31fee7cd0e9eadc567da8353"},
+  "credo": {:hex, :credo, "1.2.3", "fbd11a840e45dc42e650401e16acd2a39dde080240b974e146cc65e81ada1cd3", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm", "3c07d51ff43748bb959752ede70e40557cdcb7d61615e47ae1e9e108e0b1ceec"},
+  "custom_base": {:hex, :custom_base, "0.2.1", "4a832a42ea0552299d81652aa0b1f775d462175293e99dfbe4d7dbaab785a706", [:mix], [], "hexpm", "8df019facc5ec9603e94f7270f1ac73ddf339f56ade76a721eaa57c1493ba463"},
   "decimal": {:hex, :decimal, "1.1.1"},
-  "jason": {:hex, :jason, "1.1.2", "b03dedea67a99223a2eaf9f1264ce37154564de899fd3d8b9a21b1a6fd64afe7", [:mix], [{:decimal, "~> 1.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm"},
+  "jason": {:hex, :jason, "1.1.2", "b03dedea67a99223a2eaf9f1264ce37154564de899fd3d8b9a21b1a6fd64afe7", [:mix], [{:decimal, "~> 1.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "fdf843bca858203ae1de16da2ee206f53416bbda5dc8c9e78f43243de4bc3afe"},
   "poison": {:hex, :poison, "3.1.0", "d9eb636610e096f86f25d9a46f35a9facac35609a7591b3be3326e99a0484665", [:mix], [], "hexpm"},
   "poolboy": {:hex, :poolboy, "1.5.1"},
 }
