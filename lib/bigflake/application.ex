@@ -4,12 +4,10 @@ defmodule Bigflake.Application do
   use Application
 
   def start(_type, _args) do
-    import Supervisor.Spec, warn: false
-
     worker_id = Application.get_env(:bigflake, :worker_id)
 
     children = [
-      worker(Bigflake, [worker_id])
+      %{id: Bigflake, start: {Bigflake, :start_link, [worker_id]}}
     ]
 
     opts = [strategy: :one_for_one, name: Bigflake.Supervisor]
